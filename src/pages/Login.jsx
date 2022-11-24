@@ -11,8 +11,24 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import { useSelector } from "react-redux";
 import { Formik, Form } from "formik";
 import { TextField } from "@mui/material";
+import * as yup from "yup";
+import { login } from "../hooks/useAuthCall";
 
-const loginSchema = {};
+const loginSchema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Please enter valid email")
+    .required("Please enter email"),
+  password: yup
+    .string()
+    .required("Please enter password")
+    .min(8, "Password must be at least 8 characters")
+    .max(16, "Password must be at most 16 characters")
+    .matches(/\d+/, "Password must have a number")
+    .matches(/[a-z]+/, "Password must have a lowercase letter")
+    .matches(/[A-Z]+/, "Password must have an UPPERCASE letter")
+    .matches(/[!,?{}><%&$#£+-.]+/, "Password must have a special character"),
+});
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,7 +75,7 @@ const Login = () => {
             initialValues={{ email: "", password: "" }}
             validationSchema={loginSchema}
             onSubmit={(values, actions) => {
-              //! login(values)
+              login(values);
               actions.resetForm();
               actions.setSubmitting(false);
             }}
