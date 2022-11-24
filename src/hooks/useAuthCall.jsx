@@ -15,8 +15,7 @@ const useAuthCall = () => {
         `${BASE_URL}account/auth/login/`,
         userInfo
       );
-      dispatch(loginSuccess());
-      return data;
+      dispatch(loginSuccess(data));
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());
