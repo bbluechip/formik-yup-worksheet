@@ -6,15 +6,17 @@ import Typography from "@mui/material/Typography";
 import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/result.svg";
 import { Link, useNavigate } from "react-router-dom";
+import LoadingButton from "@mui/lab/LoadingButton";
 
 import { useSelector } from "react-redux";
 import { Formik, Form } from "formik";
+import { TextField } from "@mui/material";
 
 const loginSchema = {};
 
 const Login = () => {
   const navigate = useNavigate();
-  const { currentUser, error } = useSelector((state) => state?.auth);
+  const { currentUser, error, loading } = useSelector((state) => state?.auth);
 
   return (
     <Container maxWidth="lg">
@@ -62,9 +64,52 @@ const Login = () => {
               actions.setSubmitting(false);
             }}
           >
-            {({ values, isSubmitting, handleChange, handleBlur }) => {
-              <Form></Form>;
-            }}
+            {({
+              values,
+              isSubmitting,
+              handleChange,
+              handleBlur,
+              touched,
+              errors,
+            }) => (
+              <Form>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                  <TextField
+                    label="Email"
+                    name="email"
+                    id="email"
+                    type="email"
+                    variant="outlined"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.email && Boolean(errors.email)}
+                    helperText={touched.email && errors.email}
+                  />
+
+                  <TextField
+                    label="Password"
+                    name="password"
+                    id="password"
+                    type="password"
+                    variant="outlined"
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.password && Boolean(errors.password)}
+                    helperText={touched.password && errors.password}
+                  />
+                  <LoadingButton
+                    Loading={loading}
+                    loadingPosition="center"
+                    type="submit"
+                    variant="contained"
+                  >
+                    Submit
+                  </LoadingButton>
+                </Box>
+              </Form>
+            )}
           </Formik>
 
           <Box sx={{ textAlign: "center", mt: 2 }}>
