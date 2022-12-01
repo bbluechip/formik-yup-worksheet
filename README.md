@@ -2,7 +2,7 @@
 ![Animation](https://github.com/bbluechip/formik-yup-worksheet/blob/master/formik-yup.gif)
 
 
-👉[Click here to see the page](https://vercel.com/bbluechip/formik-yup-worksheet)
+👉[Click here to see the page](https://formik-yup-worksheet.vercel.app/)
 
 
 ## Used in this project
