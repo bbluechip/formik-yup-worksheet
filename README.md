@@ -1,19 +1,19 @@
-## react type script todo app
-![Animation](https://github.com/bbluechip/react-type-script-to-do-app/blob/master/react%20typescript%20todo%20app.gif)
+## react formik-yup worksheet
+![Animation](https://github.com/bbluechip/formik-yup-worksheet/blob/master/formik-yup.gif)
 
 
-👉[Click here to see the page](https://react-type-script-to-do-app.vercel.app/)
+👉[Click here to see the page](https://vercel.com/bbluechip/formik-yup-worksheet)
 
 
 ## Used in this project
-👉 Create react app, react components, tsx especially typescript .
+👉 Create react app, react components, jsx, useSelector, react custom hook, formik and yup libraries, navigate, react-router, material ui, axios, react-redux.
 
 👉 CSS.
 
 👉 Github & Git commands (push, pull, commit, add etc.)
 
 ## Description
-Made this website to implement typescript learnings to basic project. This site made with typescript. 
+Made this website to implement my redux, yup, formik, states, custom hook skills in reactjs.
 
 # Getting Started with Create React App
 clone repository to your own local file and
