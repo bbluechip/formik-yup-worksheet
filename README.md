@@ -1,29 +1,30 @@
-# Redux Toolkit Ornegi
+## react type script todo app
+![Animation](https://github.com/bbluechip/react-type-script-to-do-app/blob/master/react%20typescript%20todo%20app.gif)
 
-## `Kurulum`
 
-```
-npm install veya yarn
-```
+👉[Click here to see the page](https://react-type-script-to-do-app.vercel.app/)
 
-## `Kullanilan Kutuphaneler`
 
-- `@reduxjs/toolkit`
-- `react-redux`
-- `axios`
-- `react-router-dom`
-- `@mui/material-ui`
-- `@emotion/react`
-- `@emotion/styled`
+## Used in this project
+👉 Create react app, react components, tsx especially typescript .
 
-## `Kullanilacak API`:
+👉 CSS.
 
-- https://newsapi.org/
-  (Get Key butonuna tiklanarak key alinabilir)
+👉 Github & Git commands (push, pull, commit, add etc.)
 
-- URL:
-  const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${API_KEY}`;
+## Description
+Made this website to implement typescript learnings to basic project. This site made with typescript. 
 
-## `Kullanilacak Araclar`
+# Getting Started with Create React App
+clone repository to your own local file and
 
-- `Redux Dev Tools` : Chrome uzerinde calisan ve global state uzerinde yapilan tum degisikliklerin takip edilmesini saglayan tarayici uzantisidir. Indirmek icin [tiklayiniz.](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?utm_source=chrome-ntp-icon)`
+### `yarn install`
+
+to install modules after,
+
+### `yarn start`
+
+to see project on local host. 
+
+(Some projects may not work properly because free api services)
+
