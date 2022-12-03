@@ -6,7 +6,7 @@
 
 
 ## Used in this project
-👉 Create react app, react components, jsx, useSelector, react custom hook, formik and yup libraries, navigate, react-router, material ui, axios, react-redux.
+👉 Create react app, react components, jsx, useSelector, react custom hook, formik and yup libraries, navigate, react-router, material ui, react-redux.
 
 👉 CSS.
 
